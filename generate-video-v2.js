@@ -86,12 +86,24 @@ async function generateVideo(config) {
       '--disable-dev-shm-usage',
       '--display=:99',
       '--window-size=1920,1080',
-      '--disable-gpu'
-    ]
+      '--disable-gpu',
+      '--disable-infobars',
+      '--disable-blink-features=AutomationControlled',
+      '--exclude-switches=enable-automation',
+      '--disable-extensions'
+    ],
+    ignoreDefaultArgs: ['--enable-automation']
   });
   
   const page = await browser.newPage();
   await page.setViewport({ width: 1920, height: 1080 });
+  
+  // Ocultar que es automatizado
+  await page.evaluateOnNewDocument(() => {
+    Object.defineProperty(navigator, 'webdriver', {
+      get: () => false,
+    });
+  });
   
   // Iniciar grabación de pantalla
   console.log(`📹 Iniciando grabación...`);
