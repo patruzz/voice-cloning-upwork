@@ -1,0 +1,26 @@
+{
+  "name": "voice-cloning-upwork",
+  "version": "1.0.0",
+  "description": "Automated portfolio video generation with voice cloning for Upwork freelancers",
+  "main": "generate-video.js",
+  "scripts": {
+    "start": "node generate-video.js --all",
+    "single": "node generate-video.js",
+    "bot": "python3 telegram-bot.py",
+    "install-deps": "sudo apt-get update && sudo apt-get install -y ffmpeg xvfb fluxbox python3-pip && pip3 install -r requirements.txt && npm install"
+  },
+  "keywords": [
+    "voice-cloning",
+    "tts",
+    "video-automation",
+    "upwork",
+    "portfolio",
+    "freelance"
+  ],
+  "author": "Patricio Martin",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^19.0.0",
+    "dotenv": "^16.0.3"
+  }
+}

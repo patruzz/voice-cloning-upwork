@@ -1,0 +1,29 @@
+# Environment
+.env
+*.pyc
+__pycache__/
+
+# Voice samples
+voice-sample*.wav
+voice-sample*.ogg
+voice-sample*.mp3
+
+# Generated content
+output/*.mp4
+*.wav
+*.mp3
+*.ogg
+
+# Node
+node_modules/
+package-lock.json
+
+# Python
+venv/
+*.egg-info/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
