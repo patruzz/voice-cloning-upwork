@@ -40,7 +40,7 @@ def clone_voice_elevenlabs(text_file, voice_sample, output_file, api_key=None):
     # Clone voice
     print("🔬 Analyzing voice sample...")
     voice = clone(
-        name="Patru",
+        name="cloned-voice",
         description="Professional voice for Upwork videos",
         files=[voice_sample]
     )
